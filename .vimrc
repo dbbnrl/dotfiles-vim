@@ -9,13 +9,22 @@ endif
 call plug#begin()
 
   Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-repeat'
   Plug '~/solarized/vim-colors-solarized'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
   Plug 'scrooloose/syntastic'
   Plug 'kien/ctrlp.vim'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'bling/vim-airline'
   Plug 'tomtom/tcomment_vim'
+  Plug 'ervandew/supertab'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'terryma/vim-multiple-cursors'
+  " Plug 'godlygeek/tabular'
+  " Plug 'Lokaltog/vim-easymotion'
 
 call plug#end()
 "syntax enable filetype on
@@ -26,6 +35,7 @@ colorscheme solarized
 set hidden
 nnoremap ` '
 nnoremap ' `
+nnoremap <CR> :nohlsearch<cr>
 "set wildmenu
 "set wildmode=list:longest
 set ignorecase
@@ -44,7 +54,9 @@ set tabstop=3
 set expandtab
 "set list listchars=tab:\ \ ,trail:Â·
 
-map <C-n> :NERDTreeToggle<CR>
+set pastetoggle=<Insert>
+
+map <Leader>n :NERDTreeToggle<CR>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
