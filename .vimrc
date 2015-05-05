@@ -8,31 +8,52 @@ endif
 
 call plug#begin()
 
+  " Basics
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-repeat'
+
+  " Eye candy and window navigation
   Plug '~/solarized/vim-colors-solarized'
+  Plug 'bling/vim-airline'
+  Plug 'christoomey/vim-tmux-navigator'
+
+  " Syntax checking
+  Plug 'scrooloose/syntastic'
+
+  " Git
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+
+  " File management
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'kien/ctrlp.vim'
+
+  " New editing keys
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
-  Plug 'scrooloose/syntastic'
-  Plug 'kien/ctrlp.vim'
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'bling/vim-airline'
   Plug 'tomtom/tcomment_vim'
-  Plug 'ervandew/supertab'
-  Plug 'christoomey/vim-tmux-navigator'
+  " Plug 'Lokaltog/vim-easymotion'
   Plug 'terryma/vim-multiple-cursors'
   " Plug 'godlygeek/tabular'
-  " Plug 'Lokaltog/vim-easymotion'
+
+  " Auto-complete
+  " Plug 'ervandew/supertab'
+  " Plug 'Valloric/YouCompleteMe'
+  Plug 'Shougo/neocomplete.vim'
+
+  " Auto-insert
+  " Plug 'Raimondi/delimitMate'
+  " Plug 'SirVer/ultisnips'
 
 call plug#end()
+
 "syntax enable filetype on
 "filetype plugin on
 "filetype indent on
 set background=dark
 colorscheme solarized
 set hidden
+set virtualedit=all
 nnoremap ` '
 nnoremap ' `
 nnoremap <CR> :nohlsearch<cr>
