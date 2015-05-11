@@ -16,6 +16,8 @@ call plug#begin()
   Plug '~/solarized/vim-colors-solarized'
   Plug 'bling/vim-airline'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'ntpeters/vim-better-whitespace'
 
   " Syntax checking
   Plug 'scrooloose/syntastic'
@@ -35,6 +37,7 @@ call plug#begin()
   " Plug 'Lokaltog/vim-easymotion'
   Plug 'terryma/vim-multiple-cursors'
   " Plug 'godlygeek/tabular'
+  Plug 'junegunn/vim-easy-align'
 
   " Auto-complete
   " Plug 'ervandew/supertab'
@@ -44,6 +47,9 @@ call plug#begin()
   " Auto-insert
   " Plug 'Raimondi/delimitMate'
   " Plug 'SirVer/ultisnips'
+
+  " VHDL
+  Plug 'cognoscan/vim-vhdl'
 
 call plug#end()
 
@@ -90,4 +96,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
