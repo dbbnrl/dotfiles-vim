@@ -13,6 +13,9 @@ call plug#begin()
   Plug 'tpope/vim-repeat'
   Plug 'qpkorr/vim-bufkill'
 
+  " Libraries (no end-user features)
+  Plug 'Shougo/vimproc', { 'do': 'make' }
+
   " Eye candy and window navigation
   Plug '~/solarized/vim-colors-solarized'
   Plug 'bling/vim-airline'
@@ -111,6 +114,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
+
+nmap cog :IndentGuidesToggle<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
