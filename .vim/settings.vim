@@ -7,6 +7,7 @@ set background=dark
 colorscheme solarized
 set hidden
 set virtualedit=all
+set concealcursor=nc
 nnoremap ` '
 nnoremap ' `
 nnoremap <CR> :nohlsearch<cr>
