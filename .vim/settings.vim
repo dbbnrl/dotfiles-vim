@@ -24,8 +24,8 @@ set number
 set noswapfile
 set nowb
 set smartindent
-set shiftwidth=3
-set tabstop=3
+set shiftwidth=4
+set tabstop=4
 set expandtab
 "set list listchars=tab:\ \ ,trail:Â·
 " set listchars=tab:▸·,trail:·,extends:>,precedes:<,nbsp:+

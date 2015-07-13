@@ -102,6 +102,7 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:ctrlp_clear_cache_on_exit = 0
 " let g:ctrlp_user_command = ['.git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_user_command = ['.git', 'git --git-dir=%s/.git ls-files -c --exclude-standard']
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 """"""""""""""""""""" BufKill """"""""""""""""""""""
 let g:BufKillOverrideCtrlCaret = 1
